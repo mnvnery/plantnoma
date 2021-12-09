@@ -1,0 +1,13 @@
+<title>{{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/scripts.js" defer></script>
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}"> 
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicon-16x16.png">
+<link rel="manifest" href="{{ site.baseurl }}/assets/img/site.webmanifest">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">

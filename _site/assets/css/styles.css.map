@@ -1,0 +1,22 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.sass",
+		"_sass/main.sass",
+		"_sass/0-base/dir-base.sass",
+		"_sass/0-base/style.sass",
+		"_sass/1-modules/dir-modules.sass",
+		"_sass/2-layouts/dir-layouts.sass"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		"@import \"0-base/dir-base\";\n@import \"1-modules/dir-modules\";\n@import \"2-layouts/dir-layouts\";\n\n",
+		"@import \"style\";\n",
+		"body {\n    background-color: pink; }\n",
+		"",
+		""
+	],
+	"names": [],
+	"mappings": "AGAA,AAAA,IAAI,CAAC,EACD,gBAAgB,EAAE,IAAI,GAAG"
+}
