@@ -1,2 +1,21 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
-    height: 2px !important
+    height: 3px !important
+    background-color: $dark !important
+
+.burger-container
+    float: right
+    z-index: 3
+    position: fixed
+    top: 15px
+    right: 15px
+
+.hamburger-inner.dark-mode
+    background-color: $light !important
+    
+.hamburger-inner.dark-mode:after
+    background-color: $light !important
+
+.hamburger-inner.dark-mode:before
+    background-color: $light !important
+
+
