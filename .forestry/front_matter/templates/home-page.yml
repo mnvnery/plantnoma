@@ -6,3 +6,8 @@ fields:
   name: layout
   label: layout
   hidden: true
+- name: garden_images
+  type: image_gallery
+  config: {}
+  label: Garden Images
+  description: Image Gallery for the THIS CITY IS YOUR GARDEN section
