@@ -140,6 +140,17 @@ gsap.to("body", {
     }
 })
 
+gsap.to(".logo-elem", {
+    fill: "#EBEEEC",
+    scrollTrigger: {
+        start: "bottom 100%",
+        end: "bottom 50%",
+        trigger: ".box-2",
+        scrub: true,
+    }
+})
+
+
 gsap.to(".static-line", {
     borderColor: "#EBEEEC",
     scrollTrigger: {
