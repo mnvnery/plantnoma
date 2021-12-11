@@ -11,5 +11,9 @@ fields:
   config: {}
   label: Garden Images
   description: Image Gallery for the THIS CITY IS YOUR GARDEN section
+- name: here_you_are_images
+  type: image_gallery
+  config: {}
+  label: HERE YOU ARE images
 pages:
 - index.html
