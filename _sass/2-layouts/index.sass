@@ -57,6 +57,7 @@
 .garden-images-container
     display: grid
     grid-template-columns: 1fr 1fr
+    height: 100%
 
 .garden-image
     width: 20vw
@@ -65,3 +66,28 @@
 .garden-image:nth-child(even)
     justify-self: end
     margin-top: 5vh
+
+.event-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.event-flex p
+    width: 30%
+
+.events-container
+    background-color: $light
+
+.book-btn
+    height: 20px
+    width: 20px
+    background-color: $dark
+    border-radius: 50%
+
+.book-btn-active
+    background-color: $dark
+    color: $light
+    border-radius: 15px
+    font-size: 0.8em
+    padding: 5px 10px
+    display: none
