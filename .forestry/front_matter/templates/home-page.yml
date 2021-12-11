@@ -11,3 +11,5 @@ fields:
   config: {}
   label: Garden Images
   description: Image Gallery for the THIS CITY IS YOUR GARDEN section
+pages:
+- index.html
