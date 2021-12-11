@@ -35,7 +35,7 @@ fields:
     config:
       required: false
       date_format: DD/MM/YYYY
-      time_format: 
+      time_format: h:mm A ZZ
       display_utc: false
   - name: link
     type: text
