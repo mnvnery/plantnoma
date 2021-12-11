@@ -4,12 +4,8 @@ $('.hamburger').click(function() {
     $('.navbar-container').toggleClass('navbar-open');
 });
 
-$('.prod-title').hover(function() {
-    $('.left-img').toggleClass("opacity");
-});
-
-$('.rental-title').hover(function() {
-    $('.right-img').toggleClass("opacity");
+$('a .book-btn').hover(function() {
+    $(this).toggleClass('.book-btn-active');
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -139,6 +135,7 @@ gsap.to("body", {
         scrub: true,
     }
 })
+
 
 gsap.to(".logo-elem", {
     fill: "#EBEEEC",
