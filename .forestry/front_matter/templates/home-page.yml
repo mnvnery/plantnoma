@@ -15,5 +15,37 @@ fields:
   type: image_gallery
   config: {}
   label: HERE YOU ARE images
+- name: eventbrite
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: location
+    type: text
+    config:
+      required: false
+    label: Location
+  - name: date_time
+    type: datetime
+    label: Date and Time
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Eventbrite
 pages:
 - index.html
