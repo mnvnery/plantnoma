@@ -46,3 +46,5 @@ fields:
     max: 
     labelField: 
   label: Contacts
+pages:
+- about.html
