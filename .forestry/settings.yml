@@ -7,6 +7,18 @@ sections:
 - type: document
   path: index.html
   label: Home Page
+- type: document
+  path: about.html
+  label: About
+  match: "**/*"
+- type: document
+  path: noma.html
+  label: Noma
+  match: "**/*"
+- type: document
+  path: partners.html
+  label: Partners
+  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
