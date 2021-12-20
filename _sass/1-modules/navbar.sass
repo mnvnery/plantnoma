@@ -1,3 +1,6 @@
+.logo-navbar
+    position: fixed 
+
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
     height: 3px !important
     background-color: $dark !important
@@ -18,4 +21,56 @@
 .hamburger-inner.dark-mode:before
     background-color: $light !important
 
+.logo-elem.dark-mode
+    fill: $light !important
 
+.navbar-container
+    height: 100vh
+    width: 100%
+    display: none
+    z-index: 2
+    position: fixed
+    background-color: $dark
+    color: $light 
+
+.navbar
+    display: flex
+    margin: 2vw
+    height: 95%
+
+.nav-left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.nav-right
+    width: 40%
+    align-self: center
+    margin-bottom: 10vh
+
+.navbar-open
+    display: block
+
+.navbar-ws-img
+    filter: saturate(0)
+    mix-blend-mode: multiply
+    width: 22vw
+
+
+.main-titles-flex h1
+    margin-bottom: 5vh
+
+.p-relative
+    position: relative
+.p-absolute
+    position: absolute
+
+.pages-flex, .socials-flex
+    justify-content: space-between
+    display: flex
+
+.main-titles-flex
+    flex-grow: 2
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    margin-bottom: 7vh
