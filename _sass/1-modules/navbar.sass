@@ -1,9 +1,15 @@
 .logo-navbar
     position: fixed 
+    z-index: 3
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
     height: 3px !important
     background-color: $dark !important
+
+.light-background, .light-background::before, .light-background::after
+    background-color: $light !important
+    color: $dark
+    fill: $light !important
 
 .burger-container
     float: right
@@ -53,11 +59,16 @@
 .navbar-ws-img
     filter: saturate(0)
     mix-blend-mode: multiply
+    -webkit-filter: saturate(0)
+    -webkit-mix-blend-mode: multiply
     width: 22vw
 
 
 .main-titles-flex h1
     margin-bottom: 5vh
+
+.main-titles-flex h1:hover
+    font-style: italic
 
 .p-relative
     position: relative
