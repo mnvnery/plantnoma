@@ -22,10 +22,19 @@
     right: 2vw
     z-index: -1
 
+.circle-2
+    display: none
+    position: fixed
+    width: 41vw
+    bottom: -28vh
+    right: -2vw
+    z-index: -1
+
 .box-element
     height: 100vh
     width: 20vw
-
+    background-color: white
+    border: 1px solid black
 
 .titles-wrap
     position: relative
@@ -35,6 +44,7 @@
     padding-left: 20px 
     opacity: 0
     position: absolute
+    transition: 0.2s
 
 .large-title-italic
     position: fixed
@@ -57,7 +67,8 @@
 .garden-images-container
     display: grid
     grid-template-columns: 1fr 1fr
-    height: 100%
+    margin: 20px
+    margin-bottom: 60vh
 
 .garden-image
     width: 20vw
@@ -71,12 +82,19 @@
     display: flex
     justify-content: space-between
     align-items: center
+    border-bottom: 2px solid $dark
 
 .event-flex p
     width: 30%
+    margin: 1.5vh
 
 .events-container
     background-color: $light
+    width: 96vw
+    margin: 0 20px
+    position: fixed
+    bottom: 2vh
+
 
 .book-btn
     height: 20px
@@ -91,3 +109,27 @@
     font-size: 0.8em
     padding: 5px 10px
     display: none
+
+.compost-images
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-auto-flow: column
+    grid-template-rows: 1fr
+    position: fixed
+    bottom: -5vh
+    align-items: baseline
+    z-index: 2
+
+.compost-img-wrap 
+    height: auto
+    grid-column: span 2
+
+.compost-img
+    max-width: 25vw
+    max-height: 50vh
+
+
+.events-line
+    border-top: 3px solid
+    border-color: $dark 
+

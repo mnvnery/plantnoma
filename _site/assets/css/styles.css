@@ -10,9 +10,15 @@
 
 @font-face { font-family: 'HK Grotesk'; font-style: italic; font-weight: 700; src: url("../fonts/HKGrotesk-SemiBoldItalic.woff") format("woff"); }
 
-body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; }
+body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; margin: 0; }
 
 h1, .h1 { font-size: 5em; margin: 0; line-height: 1em; }
+
+h2, .h2 { font-size: 3em; }
+
+h3, .h2 { font-size: 1.5em; }
+
+.logo-navbar { position: fixed; }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { height: 3px !important; background-color: #38523E !important; }
 
@@ -24,6 +30,42 @@ h1, .h1 { font-size: 5em; margin: 0; line-height: 1em; }
 
 .hamburger-inner.dark-mode:before { background-color: #EBEEEC !important; }
 
+.logo-elem.dark-mode { fill: #EBEEEC !important; }
+
+.navbar-container { height: 100vh; width: 100%; display: none; z-index: 2; position: fixed; background-color: #38523E; color: #EBEEEC; }
+
+.navbar { display: flex; margin: 2vw; height: 95%; }
+
+.nav-left { display: flex; flex-direction: column; justify-content: space-between; }
+
+.nav-right { width: 40%; align-self: center; margin-bottom: 10vh; }
+
+.navbar-open { display: block; }
+
+.navbar-ws-img { filter: saturate(0); mix-blend-mode: multiply; width: 22vw; }
+
+.main-titles-flex h1 { margin-bottom: 5vh; }
+
+.p-relative { position: relative; }
+
+.p-absolute { position: absolute; }
+
+.pages-flex, .socials-flex { justify-content: space-between; display: flex; }
+
+.main-titles-flex { flex-grow: 2; display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 7vh; }
+
+.footer-page { height: 100vh; width: 100vw; background-color: #EBEEEC; position: relative; }
+
+.footer-container { position: absolute; bottom: 0; padding: 20px; }
+
+.large-plant { font-size: 15.5vw; }
+
+.footer-line { border-top: 3px solid #38523E; }
+
+.footer-top-flex { display: flex; justify-content: space-between; }
+
+.page-selection p { max-width: 15vw; }
+
 .fixed-elements { position: fixed; width: 100%; }
 
 .logo { width: 6vw; padding: 15px; }
@@ -32,11 +74,13 @@ h1, .h1 { font-size: 5em; margin: 0; line-height: 1em; }
 
 .circle { width: 2vw; position: fixed; bottom: 2vw; right: 2vw; z-index: -1; }
 
-.box-element { height: 100vh; width: 20vw; }
+.circle-2 { display: none; position: fixed; width: 41vw; bottom: -28vh; right: -2vw; z-index: -1; }
+
+.box-element { height: 100vh; width: 20vw; background-color: white; border: 1px solid black; }
 
 .titles-wrap { position: relative; margin-top: 6vh; }
 
-.large-title { padding-left: 20px; opacity: 0; position: absolute; }
+.large-title { padding-left: 20px; opacity: 0; position: absolute; transition: 0.2s; }
 
 .large-title-italic { position: fixed; right: 2vw; bottom: 1vw; text-align: right; z-index: 1; color: #EBEEEC; }
 
@@ -46,21 +90,29 @@ h1, .h1 { font-size: 5em; margin: 0; line-height: 1em; }
 
 .greens { width: 50%; float: right; }
 
-.garden-images-container { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+.garden-images-container { display: grid; grid-template-columns: 1fr 1fr; margin: 20px; margin-bottom: 60vh; }
 
 .garden-image { width: 20vw; margin-bottom: 5vh; }
 
 .garden-image:nth-child(even) { justify-self: end; margin-top: 5vh; }
 
-.event-flex { display: flex; justify-content: space-between; align-items: center; }
+.event-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #38523E; }
 
-.event-flex p { width: 30%; }
+.event-flex p { width: 30%; margin: 1.5vh; }
 
-.events-container { background-color: #EBEEEC; }
+.events-container { background-color: #EBEEEC; width: 96vw; margin: 0 20px; position: fixed; bottom: 2vh; }
 
 .book-btn { height: 20px; width: 20px; background-color: #38523E; border-radius: 50%; }
 
 .book-btn-active { background-color: #38523E; color: #EBEEEC; border-radius: 15px; font-size: 0.8em; padding: 5px 10px; display: none; }
+
+.compost-images { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-flow: column; grid-template-rows: 1fr; position: fixed; bottom: -5vh; align-items: baseline; z-index: 2; }
+
+.compost-img-wrap { height: auto; grid-column: span 2; }
+
+.compost-img { max-width: 25vw; max-height: 50vh; }
+
+.events-line { border-top: 3px solid; border-color: #38523E; }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
