@@ -7,9 +7,9 @@ fields:
   default: ''
   config:
     required: false
-    wysiwyg: false
+    wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   description: This is the larger text that appears on the left
   label: Highlighted Text
 - name: general_text
@@ -17,9 +17,9 @@ fields:
   default: ''
   config:
     required: false
-    wysiwyg: false
+    wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   description: This is the smaller, informational text that appears on the right
   label: General Text
 - name: partners
