@@ -22,3 +22,7 @@ fields:
       format: html-blocks
   description: This is the smaller, informational text that appears on the right
   label: General Text
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
