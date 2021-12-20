@@ -1,4 +1,46 @@
 ---
 label: Partners
 hide_body: true
-fields: []
+fields:
+- name: highlighted_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  description: This is the larger text that appears on the left
+  label: Highlighted Text
+- name: general_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  description: This is the smaller, informational text that appears on the right
+  label: General Text
+- name: partners
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Partners
