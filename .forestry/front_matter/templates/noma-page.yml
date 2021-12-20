@@ -1,4 +1,14 @@
 ---
 label: Noma Page
 hide_body: true
-fields: []
+fields:
+- name: highlighted_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Highlighted Text
+  description: This is the larger text that appears on the left
