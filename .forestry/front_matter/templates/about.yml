@@ -1,4 +1,43 @@
 ---
 label: 'About '
 hide_body: true
-fields: []
+fields:
+- name: highlighted_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Highlighted Text
+  description: This is the larger text that appears on the left
+- name: general_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: General Text
+  description: This is the smaller, informational text that appears on the right
+- name: contacts
+  type: field_group_list
+  fields:
+  - name: for
+    type: text
+    config:
+      required: false
+    description: 'Example: "For Workshops and Experiments"'
+    label: For
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Contacts
