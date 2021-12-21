@@ -10,7 +10,9 @@
 
 @font-face { font-family: 'HK Grotesk'; font-style: italic; font-weight: 700; src: url("../fonts/HKGrotesk-SemiBoldItalic.woff") format("woff"); }
 
-body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; margin: 0; font-weight: 200; overflow-x: hidden; }
+body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; margin: 0; font-weight: 200; }
+
+body, html { overflow-x: hidden; }
 
 .green-background { background-color: #38523E; color: #EBEEEC; }
 
@@ -24,7 +26,7 @@ a { color: inherit; text-decoration: none; }
 
 a:hover { font-style: italic; }
 
-@media screen and (max-width: 600px) { h1, .h1 { font-size: 3em; } h2, .h2 { font-size: 1.8em; } }
+@media screen and (max-width: 600px) { h1, .h1 { font-size: 2.3em; } h2, .h2 { font-size: 1.6em; } }
 
 .logo-navbar { position: fixed; z-index: 3; top: 0; left: 0; }
 
@@ -78,9 +80,11 @@ a:hover { font-style: italic; }
 
 .page-selection p { max-width: 15vw; }
 
-.fixed-elements { position: fixed; width: 100vw; }
+@media screen and (min-width: 600px) { .footer-mobile { display: none; } }
 
-.main-content { width: 100vw; }
+@media screen and (max-width: 600px) { .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 14vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } }
+
+.fixed-elements { position: fixed; width: 100vw; z-index: 2; }
 
 .logo { width: 6vw; padding: 15px; }
 
@@ -114,13 +118,13 @@ a:hover { font-style: italic; }
 
 .event-flex p { width: 30%; margin: 1.5vh; }
 
-.events-container { background-color: #EBEEEC; width: 96vw; margin: 0 20px; position: fixed; bottom: 2vh; }
+.events-container { background-color: #EBEEEC; width: 96vw; margin: 0 20px; position: fixed; bottom: 2vh; z-index: 3; }
 
 .book-btn { height: 20px; width: 20px; background-color: #38523E; border-radius: 50%; }
 
 .book-btn-active { background-color: #38523E; color: #EBEEEC; border-radius: 15px; font-size: 0.8em; padding: 5px 10px; display: none; }
 
-.compost-images { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-flow: column; grid-template-rows: 1fr; position: fixed; bottom: -5vh; align-items: baseline; z-index: 2; }
+.compost-images { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-flow: column; grid-template-rows: 1fr; position: fixed; bottom: -5vh; align-items: baseline; z-index: 3; }
 
 .compost-img-wrap { height: auto; grid-column: span 2; }
 
@@ -176,7 +180,11 @@ a:hover { font-style: italic; }
 
 .interested { font-size: 2.4em; width: 50%; }
 
-@media screen and (max-width: 600px) { .logo-navbar { width: 24vw; top: 15px; left: 15px; } .static-line-white { width: 89vw; } .main-info { flex-direction: column; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1.2em; line-height: 1.4em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.9em; } .navbar { margin: 20px; height: 65%; margin-top: 24vh; } .interested { font-size: 1.8em; width: 100%; } .partners { flex-direction: column; } .partners-elem { width: 95%; } }
+@media screen and (min-width: 600px) { .mobile-only { display: none; } }
+
+@media screen and (max-width: 600px) { .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 24vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } }
+
+@media screen and (max-width: 600px) { .garden-image { width: 35vw; } .compost-img { max-width: 60vw; position: relative; max-height: 30vh; } .compost-images { grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(3, auto); bottom: -1vh; } .circle { width: 7vw; bottom: 10vw; right: 5vw; } .circle-2 { width: 90vw; bottom: -25vw; } .greens { width: 100%; } .living-world { right: 6vw; } .events-container { width: 89vw; bottom: 11vh; } .book-btn, .event-location { display: none; } .event-flex p { width: auto; margin: 1.5vh 0; } .event-date { width: 39% !important; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
