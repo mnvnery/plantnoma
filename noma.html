@@ -1,7 +1,7 @@
 ---
 layout: green
 highlighted_text: "<p>NOMA IS A GROWING NEIGHBOURHOOD.<br><br>It’s thanks to NOMA
-  that Plant NOMA is able to take root.</p>"
+  that PLANT NOMA is able to take root.</p>"
 general_text: "<p>NOMA is a 20-acre neighbourhood in Manchester, committed to creating
   an innovative and responsibly designed location for the city to discover; to grow
   within; and to belong to. Underpinned by a people led approach to creating place,
@@ -16,3 +16,36 @@ images:
 - "/assets/img/image-12.webp"
 
 ---
+<div class="fixed-elements fixed-noma">
+      <div class="static-line-white"></div>
+      <h1 class="page-title">NOMA</h1>
+      <div class="main-info">
+          <div class="info-left">
+            <h2>{{ page.highlighted_text }}</h2>
+            <div class="noma-flex">
+              <p>@NOMA_MCR</p>
+              <div class="small-circle"></div>
+              <p>www.noma-manchester.com</p>
+            </div>
+          </div>
+          <div class="general-text">{{ page.general_text }}</div>
+      </div>
+</div>
+
+  <div class="noma-photo-grid">
+    {% for img in page.images %}
+      <img src="{{site.baseurl}}/{{ img }}" class="noma-photo">
+    {% endfor %}
+  </div>
+
+<script>
+window.onload = function () {
+var images = document.getElementsByTagName('img');
+
+for( var i=0; i<images.length;i++){
+  if(images[i].naturalWidth < images[i].naturalHeight) {
+      $(images[i]).addClass('portrait');  
+  }
+}
+}
+</script>

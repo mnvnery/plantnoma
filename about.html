@@ -1,6 +1,6 @@
 ---
 layout: green
-highlighted_text: "<p>We are in the business of city re-enchantment.</p>"
+highlighted_text: "<p>WE ARE IN THE BUSINESS OF CITY RE-ENCHANTMENT.</p>"
 general_text: "<p>Development has dealt us a purified city of crisp, clipped lines
   and careful order. Sober streetscapes have forgotten their true nature and by turn
   we have forgotten ours. A wilder city lies slumbering and it is time we woke it
@@ -24,4 +24,39 @@ contacts:
   for: FOR WORKSHOPS AND EXPERIMENTS
 
 ---
+<div class="static-line-white"></div>
+<div class="info-container">
+    <h1 class="page-title">ABOUT US</h1>
+    <div class="main-info">
+        <h2 class="info-left">{{ page.highlighted_text }}</h2>
+        <div class="general-text">{{ page.general_text }}</div>
+    </div>
 
+    <div class="contacts">
+        {% for elem in page.contacts %}
+        <div>
+            <p><strong>{{ elem.for }}</strong></p>
+            <p class="email">{{ elem.email }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="address-title">PLANT NOMA is located here...</h2>
+    <div id='map' style='width: 94vw; height: 75vh;'></div>
+    <div class="address-flex">
+        <p>Our workshops are held at: Sadler's Yard, Redfern Street, Manchester M60 0AB</p>
+        <p>Find us as <u>magic.soil.rush</u> on what3words</p>
+    </div>
+</div>
+<script>    
+mapboxgl.accessToken = 'pk.eyJ1IjoibW5lcnkiLCJhIjoiY2tkazZ3MWJnMGx4MTJ0bnRlNGkzOWtyaCJ9.Fc886hpcM7gZQa8_8Q9wXw';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mnery/ckwl42lah16ko15pb80xqicp5',
+center: [-2.239720, 53.486777], 
+zoom: 15
+});
+var marker2 = new mapboxgl.Marker({ color: '#F2F3EB' })
+        .setLngLat([-2.239720, 53.486777])
+        .addTo(map);
+</script>

@@ -1,6 +1,6 @@
 ---
 layout: green
-general_text: "<p>Interested in joining this list?<br>garden@plantnoma.garden.</p>"
+general_text: "<p>INTERESTED IN JOINING THIS LIST?<br>garden@plantnoma.garden.</p>"
 partners:
 - title: MANCHESTER CARES 
   description: "<p>The city we love is growing and changing at speed, often leaving
@@ -14,7 +14,23 @@ partners:
 - title: 'STANDARD PRACTICE '
   description: "<p>Involving people as active participants in their towns and cities
     through informal urbanism.</p>"
-highlighted_text: "<p>This project can only continue to grow if we continue to cultivate
-  these connections.</p>"
+highlighted_text: "<p>THIS PROJECT CAN ONLY CONTINUE TO GROW IF WE CONTINUE TO <i>CULTIVATE</i> THESE CONNECTIONS.</p>"
 
 ---
+<div class="static-line-white"></div>
+<div class="info-container">
+    <h1 class="page-title">PARTNERSHIPS</h1>
+    <div class="main-info">
+        <h2 class="info-left">{{ page.highlighted_text }}</h2>
+        <h2 class="interested">{{ page.general_text }}</h2>
+    </div>
+
+    <div class="partners">
+        {% for elem in page.partners reversed %}
+        <div class="partners-elem">
+            <h3>{{ elem.title }}</h3>
+            <p>{{ elem.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
