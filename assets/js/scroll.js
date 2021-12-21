@@ -3,6 +3,17 @@ ScrollTrigger.matchMedia({
 	
     // ---------------- large screens ---------------------
     "(min-width: 960px)": function() {
+        gsap.to(".circle", {
+            width: "41vw",
+            bottom: "-28vh",
+            right: "-2vw",
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })   
         // Greens-1   
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -21,7 +32,18 @@ ScrollTrigger.matchMedia({
             y:"-27vh",
             duration: 1
             }
-        );
+        ); 
+        gsap.to(".circle-2", {
+            display: "block",
+            width: '104vw',
+            y: "1vh",
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-2",
+                scrub: true,
+            }
+        })
     },
 
     // ---------------- medium screens ---------------------
@@ -32,7 +54,18 @@ ScrollTrigger.matchMedia({
 
     // ---------------- small screens ---------------------
     "(max-width: 599px)": function() {
-            // Greens-1
+        gsap.to(".circle", {
+            width: "90vw",
+            y: "15vh",
+            right: "-3vw",
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })        
+        // Greens-1
             let tl = gsap.timeline({
                 scrollTrigger: {
                 trigger: $(".box-1"),
@@ -47,32 +80,27 @@ ScrollTrigger.matchMedia({
                 duration: 1
                 },
                 {
-                y:"80vh",
+                y:"30vh",
                 duration: 1
                 }
             );
+            gsap.to(".circle-2", {
+                display: "block",
+                width: '215vw',
+                x: "2.5vw",
+                bottom: 0,
+                scrollTrigger: {
+                    start: "bottom 100%",
+                    end: "bottom 50%",
+                    trigger: ".box-2",
+                    scrub: true,
+                }
+            })
     },     
     // ---------------- all screens --------------------- 
     "all": function() {
-        //start
-        gsap.to(".circle", {
-            width: "41vw",
-            bottom: "-28vh",
-            right: "-2vw",
-            scrollTrigger: {
-                start: "bottom 100%",
-                end: "bottom 50%",
-                trigger: ".box-1",
-                scrub: true,
-            }
-        })
-        
-        
-        
-        
+        //start    
         // Animate From To
-        
-        
         let tl1 = gsap.timeline({
             scrollTrigger: {
             trigger: ".box-1",
@@ -83,11 +111,11 @@ ScrollTrigger.matchMedia({
             }
         });
         tl1.fromTo($(".living-world"), {
-            y:550,
+            y:"100vh",
             duration: 1
             },
             {
-            y:0,
+            y:"-6vh",
             duration: 1
             }
         );
@@ -128,17 +156,7 @@ ScrollTrigger.matchMedia({
         })
         
         
-        gsap.to(".circle-2", {
-            display: "block",
-            width: '104vw',
-            y: 5,
-            scrollTrigger: {
-                start: "bottom 100%",
-                end: "bottom 50%",
-                trigger: ".box-2",
-                scrub: true,
-            }
-        })
+
         
         
         
@@ -300,7 +318,7 @@ ScrollTrigger.matchMedia({
             })
             
             gsap.from(".compost-images", {
-                y: 400,
+                y: "100vh",
                 scrollTrigger: {
                     trigger: ".box-4",
                     start: "top 90%",
@@ -366,7 +384,7 @@ ScrollTrigger.matchMedia({
                 }
             })
             gsap.to(".compost-images", {
-                y: -740,
+                y: "-110vh",
                 immediateRender: false,
                 scrollTrigger: {
                     start: "bottom 70%",

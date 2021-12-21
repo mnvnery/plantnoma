@@ -15,7 +15,6 @@ here_you_are_images:
 - "/assets/img/dsc093471.webp"
 - "/assets/img/ag4i6260.webp"
 - "/assets/img/ag4i2176.webp"
-- "/assets/img/2c6a9784.webp"
 eventbrite:
 - title: The Big Seed Sow
   location: Sadler's Yard
@@ -109,8 +108,8 @@ eventbrite:
       {% for event in page.eventbrite reversed %}
       <div class="event-flex">
           <p>{{ event.title }}</p>
-          <p>{{ event.location }}</p>
-          <p>{{ event.date_time | date: "%a, %b %-d, %H:%M" }}</p>
+          <p class="event-location">{{ event.location }}</p>
+          <p class="event-date">{{ event.date_time | date: "%a, %b %-d, %H:%M" }}</p>
 
           <a href="{{ event.link }}" class="book-btn"><span class="book-btn-active">BOOK YOUR SPOT</span></a>
       </div>
@@ -126,53 +125,19 @@ eventbrite:
     {% endfor %}
   </div>
 </div>
-<div class="footer-page">
-  <div class="footer-container">
-    <div class="footer-line"></div>
-    <div class="footer-top-flex">
-      <div class="signup">
-        <h3>WANT TO HEAR MORE?</h3>
-      </div>
-      <div class="page-selection">
-        <h3>ABOUT</h3>
-        <p>We are in the business
-          of city re-enchantment.</p>
-      </div>
-      <div class="page-selection">
-        <h3>NOMA</h3>
-        <p>NOMA is a growing
-          neighborhood. </p>
-      </div>
-      <div class="page-selection">
-        <h3>PARTNERS</h3>
-        <p>We are lucky enough to work
-          with some brilliant people.</p>
-      </div>
-      <div class="footer-socials">
-        <p>Instagram</p>
-        <p>Twitter</p>
-        <p>Medium</p>
-        <p>Eventbrite</p>
-      </div>
-    </div>
-    <div class="footer-line"></div>
-    <h1 class="large-plant">PLANT NOMA</h1>
-    <div class="footer-line"></div>
-  </div>
-</div>
+
 <script src="{{ site.baseurl }}/assets/js/scroll.js"></script>
 <script>
     $('.compost-img').each(function(){
-    y = Math.floor((Math.random() * 10) + 1);
-    x = Math.floor((Math.random() * 73) + 1);
-    a = Math.floor((Math.random() * 65) + 1);
-    b = Math.floor((Math.random() * 77) + 1);
-    if (window.matchMedia('(min-width: 600px)').matches) {
-      $(this).css("bottom", y + 'vh');
-      $(this).css("left", x + 'vw');
-    } else {
-      $(this).css("top", a + 'vh');
-      $(this).css("left", b + 'vw');
-    }
-  });
+      y = Math.floor((Math.random() * 10) + 1);
+      x = Math.floor((Math.random() * 73) + 1);
+      a = Math.floor((Math.random() * 5) + 1);
+      b = Math.ceil(Math.random() * 5) * (Math.round(Math.random()) ? 1 : -1);
+      if (window.matchMedia('(min-width: 600px)').matches) {
+        $(this).css("bottom", y + 'vh');
+        $(this).css("left", x + 'vw');
+      } else {
+        $(this).css("transform", "rotate("+ b + 'deg)');
+      }
+    });
 </script>
