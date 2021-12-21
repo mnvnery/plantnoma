@@ -10,13 +10,13 @@
 
 @font-face { font-family: 'HK Grotesk'; font-style: italic; font-weight: 700; src: url("../fonts/HKGrotesk-SemiBoldItalic.woff") format("woff"); }
 
-body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; margin: 0; }
+body { background-color: #EBEEEC; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; margin: 0; font-weight: 200; overflow-x: hidden; }
 
 .green-background { background-color: #38523E; color: #EBEEEC; }
 
 h1, .h1 { font-size: 5em; margin: 0; line-height: 1em; }
 
-h2, .h2 { font-size: 3em; }
+h2, .h2 { font-size: 2.8em; line-height: 1.2em; }
 
 h3, .h2 { font-size: 1.5em; }
 
@@ -24,7 +24,9 @@ a { color: inherit; text-decoration: none; }
 
 a:hover { font-style: italic; }
 
-.logo-navbar { position: fixed; z-index: 3; }
+@media screen and (max-width: 600px) { h1, .h1 { font-size: 3em; } h2, .h2 { font-size: 1.8em; } }
+
+.logo-navbar { position: fixed; z-index: 3; top: 0; left: 0; }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { height: 3px !important; background-color: #38523E !important; }
 
@@ -40,7 +42,7 @@ a:hover { font-style: italic; }
 
 .logo-elem.dark-mode { fill: #EBEEEC !important; }
 
-.navbar-container { height: 100vh; width: 100%; display: none; z-index: 2; position: fixed; background-color: #38523E; color: #EBEEEC; }
+.navbar-container { height: 100vh; width: 100%; display: none; z-index: 2; position: fixed; background-color: #38523E; color: #EBEEEC; top: 0; }
 
 .navbar { display: flex; margin: 2vw; height: 95%; }
 
@@ -76,7 +78,9 @@ a:hover { font-style: italic; }
 
 .page-selection p { max-width: 15vw; }
 
-.fixed-elements { position: fixed; width: 100%; }
+.fixed-elements { position: fixed; width: 100vw; }
+
+.main-content { width: 100vw; }
 
 .logo { width: 6vw; padding: 15px; }
 
@@ -123,6 +127,56 @@ a:hover { font-style: italic; }
 .compost-img { max-width: 25vw; max-height: 50vh; }
 
 .events-line { border-top: 3px solid; border-color: #38523E; }
+
+.info-container { overflow-y: scroll; height: 75vh; }
+
+.static-line-white { border-top: 3px solid; border-color: #EBEEEC; width: 96vw; margin: 0 20px; margin-top: 22vh; }
+
+.page-title { padding: 20px; }
+
+.main-info { display: flex; padding: 0 20px; justify-content: space-between; gap: 5%; width: 96vw; }
+
+.info-left { width: 50%; }
+
+.main-info h2 { margin: 0; }
+
+.general-text { margin-block-start: 1.7em; width: 52%; font-size: 1.2em; line-height: 1.6em; margin-right: 2vw; }
+
+.contacts { display: flex; flex-wrap: wrap; margin: 20px; }
+
+.contacts p { margin-block-end: 1vh; margin-block-start: 1vh; }
+
+.contacts div { width: 50%; margin-bottom: 5vh; }
+
+.email { font-weight: 200; }
+
+#map { margin: 0 20px; mix-blend-mode: color-burn; -webkit-mix-blend-mode: color-burn; }
+
+.address-flex { display: flex; margin: 0 20px; justify-content: space-between; width: 94vw; margin-bottom: 10vh; }
+
+.address-title { padding-left: 20px; margin-bottom: 2vh; }
+
+.noma-flex { display: flex; gap: 8%; align-items: baseline; }
+
+.small-circle { height: 15px; width: 15px; border-radius: 50%; background-color: #EBEEEC; }
+
+.noma-photo-grid { display: grid; grid-template-columns: 1fr 1fr; width: 100vw; grid-auto-flow: dense; margin: 100vh 20px; max-width: 96vw; grid-gap: 2vw; }
+
+.noma-photo-grid img { max-width: 40vw; width: 100%; object-fit: cover; }
+
+.noma-photo:nth-child(even) { justify-self: end; margin-top: 10vh; }
+
+.noma-photo.portrait { max-width: 30vw !important; max-height: 75vh; }
+
+.fixed-noma { top: 0; z-index: -1; }
+
+.partners { display: flex; justify-content: space-between; margin: 0 20px; width: 96vw; grid-gap: 6%; }
+
+.partners-elem { width: 54%; }
+
+.interested { font-size: 2.4em; width: 50%; }
+
+@media screen and (max-width: 600px) { .logo-navbar { width: 24vw; top: 15px; left: 15px; } .static-line-white { width: 89vw; } .main-info { flex-direction: column; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1.2em; line-height: 1.4em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.9em; } .navbar { margin: 20px; height: 65%; margin-top: 24vh; } .interested { font-size: 1.8em; width: 100%; } .partners { flex-direction: column; } .partners-elem { width: 95%; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
