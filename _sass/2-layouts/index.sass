@@ -87,12 +87,20 @@
     border-bottom: 2px solid $dark
 
 .event-flex p
-    width: 30%
-    margin: 1.5vh 0
+    width: 20%
+    margin: 1.4vh 0
+
+.book-btn-container
+    width: 10%
+    position: relative
 
 .event-title
     font-weight: bold 
-    
+    width: 40% !important
+
+.event-location 
+    width: 30% !important
+
 .events-container
     background-color: $light
     width: 96vw
@@ -107,6 +115,9 @@
     width: 20px
     background-color: $dark
     border-radius: 50%
+    position: absolute
+    top: -1.4vh
+    right: 0
 
 .book-btn-active
     background-color: $dark
@@ -115,6 +126,11 @@
     font-size: 0.8em
     padding: 5px 10px
     display: none
+    position: absolute
+    top: -2vh
+    right: 0
+    pointer-events: none
+
 
 .compost-images
     display: grid
@@ -170,7 +186,8 @@
 
 .hover-img 
     position: fixed
-    width: 10%
+    max-width: 20vw
+    max-height: 30vh
     object-fit: contain
     transform: translateX(-50%) translateY(-50%)
     top: 50%
