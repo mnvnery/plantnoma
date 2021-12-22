@@ -82,6 +82,8 @@ a:hover { font-style: italic; }
 
 .footer-socials a:hover { font-style: normal; text-decoration: underline; }
 
+.socials-flex a:hover { font-style: normal; text-decoration: underline; }
+
 @media screen and (min-width: 600px) { .footer-mobile { display: none; } .page-selection h3 { margin-bottom: 0; } }
 
 @media screen and (max-width: 600px) { .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 14vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } }
@@ -186,7 +188,7 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 .noma-flex { display: flex; gap: 8%; align-items: baseline; }
 
-.small-circle { height: 15px; width: 15px; border-radius: 50%; background-color: #EBEEEC; }
+.small-circle { height: 15px; width: 15px; border-radius: 50%; background-color: #EBEEEC; margin: 0 2vw; }
 
 .noma-photo { width: 32vw; object-fit: cover; max-height: 72vh; }
 
@@ -194,11 +196,11 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 .partners { display: flex; justify-content: space-between; margin: 0 20px; width: 96vw; grid-gap: 6%; }
 
-.partners-elem { width: 54%; }
+.partners-elem { width: 54%; margin-right: 3vw; }
 
 .interested { font-size: 2.4em; width: 50%; }
 
-@media screen and (min-width: 600px) { .mobile-only { display: none; } }
+@media screen and (min-width: 600px) { .mobile-only { display: none; } .interested, .general-text { margin-left: 5vw; } .noma-photo:nth-child(2) { margin: 0 0.5vw; } }
 
 @media screen and (max-width: 600px) { .desktop-only { display: none; } .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 20vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } .margin-5 { margin-bottom: 10vh; } .image-center { flex-direction: column; width: 89vw; } .noma-photo { width: auto; max-height: 25vh; margin-bottom: 1vh; } }
 
