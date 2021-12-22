@@ -29,7 +29,7 @@ ScrollTrigger.matchMedia({
             duration: 1
             },
             {
-            y:"-27vh",
+            y:"-18vh",
             duration: 1
             }
         ); 
@@ -120,7 +120,15 @@ ScrollTrigger.matchMedia({
             }
         );
         
-        
+        gsap.to(".index-arrow", {
+            opacity: "0",
+            scrollTrigger: {
+                start: "bottom 65%",
+                end: "bottom 10%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })
         // Animate From To
         
         let timeline = gsap.timeline({
@@ -155,11 +163,6 @@ ScrollTrigger.matchMedia({
             }
         })
         
-        
-
-        
-        
-        
         gsap.to(".logo-elem", {
             fill: "#EBEEEC",
             scrollTrigger: {
@@ -181,7 +184,7 @@ ScrollTrigger.matchMedia({
             }
         })
         
-        gsap.to(".living-world, .greens", {
+        gsap.to(".living-world, .greens, .you-underline", {
             opacity: "0",
             scrollTrigger: {
                 start: "bottom 100%",
@@ -228,8 +231,8 @@ ScrollTrigger.matchMedia({
         })
         
         window.addEventListener("load", function() {
+            $(".events-container, .compost-images").css("opacity", "1");
             // ARE YOU HERE
-        
             gsap.to("body", {
                 backgroundColor: "#EBEEEC",
                 immediateRender: false,
@@ -365,6 +368,22 @@ ScrollTrigger.matchMedia({
                     scrub: true,
                 }
             })
+
+            gsap.to(".hamburger-inner", {
+                scrollTrigger: {
+                    trigger: ".box-4",
+                    // trigger element - viewport
+                    start: "40% 90%",
+                    end: "40% 90%",
+                    scrub: true,
+                    onEnter: () => {
+                        $(".hamburger-inner").addClass("dark-mode");
+                    },
+                    onEnterBack: () => {
+                        $(".hamburger-inner").removeClass("dark-mode");
+                    }
+                }
+            })
         
             gsap.to(".hereyouare", {
                 scrollTrigger: {
@@ -413,6 +432,21 @@ ScrollTrigger.matchMedia({
                     end: "top 35%",
                     trigger: ".footer-page",
                     scrub: true,
+                }
+            })
+            gsap.to(".hamburger-inner", {
+                scrollTrigger: {
+                    trigger: ".footer-page",
+                    // trigger element - viewport
+                    start: "55% bottom",
+                    end: "55% bottom",
+                    scrub: true,
+                    onEnter: () => {
+                        $(".hamburger-inner").removeClass("dark-mode");
+                    },
+                    onEnterBack: () => {
+                        $(".hamburger-inner").addClass("dark-mode");
+                    }
                 }
             })
         });
