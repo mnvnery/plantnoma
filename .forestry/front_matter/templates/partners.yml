@@ -44,5 +44,9 @@ fields:
     max: 
     labelField: 
   label: Partners
+- name: images
+  type: image_gallery
+  config: {}
+  label: images
 pages:
 - partners.html
