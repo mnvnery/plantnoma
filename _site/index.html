@@ -23,7 +23,7 @@
         <div class="burger-container">
             <button class="hamburger hamburger--collapse" type="button">
                 <span class="hamburger-box">
-                <span class="hamburger-inner white-background"></span>
+                <span class="hamburger-inner"></span>
                 </span>
             </button>
         </div>
@@ -33,8 +33,8 @@
                 <div class="nav-right">
                     <p>NEXT WORKSHOP:</p>
                         <div class="p-relative">
-                            <h2 class="p-absolute">MUSHROOM<br>MOTEL 08.01</h2>
                             <img src="/plantnoma/assets/img/log.png" class="navbar-ws-img p-absolute">
+                            <h2 class="p-absolute">MUSHROOM<br>MOTEL 08.01</h2>
                         </div>
                 </div>
                 <div class="nav-left">
@@ -45,9 +45,9 @@
                         <a>Eventbrite</a>
                     </div>
                     <div class="main-titles-flex">
-                        <h1>YOU ARE HERE</h1>
-                        <h1>ARE YOU HERE?</h1>
-                        <h1>HERE YOU ARE</h1>
+                        <a href="/plantnoma/#you-are-here"><h1>YOU ARE HERE</h1></a>
+                        <a href="/plantnoma/#are-you-here"><h1>ARE YOU HERE?</h1></a>
+                        <a href="/plantnoma/#here-you-are"><h1>HERE YOU ARE</h1></a>
                     </div>
                     <div class="pages-flex d-flex">
                         <h3><a href="/plantnoma/about">ABOUT</a></h3>
@@ -57,17 +57,32 @@
                 </div>
             </div>
         </div>
-        <div class="main-content">
+        <img src="" class="hover-img">
+<div class="main-content">
   <div class="fixed-elements">
       <svg class="logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 604.76 639.8"><defs><style>.logo-elem{fill:#38523e;}</style></defs><path class="logo-elem" d="M184.29,158.75l61,78.86-23.13,17.91L79.73,71.52,149.38,17.6c35-27.06,70.14-22.35,95.37,10.24s21,67.84-14,94.89Zm28.91-57.69C234,85,236.53,66.61,220.87,46.37S186.75,24,166,40.09l-46,35.6,47.21,61Z" transform="translate(0 0)"/><path class="logo-elem" d="M394.38,294.38,303.22,177.9,486.47,34.49l18,23L343.24,183.72l73.14,93.45Z" transform="translate(0 0)"/><path class="logo-elem" d="M579.59,221.1l25.17,12.09L578.61,478.76l-27.23-13.09,8-65.09-82.09-39.44-45.8,47L404.22,395Zm-3.83,40.2-77.69,78.84,64.72,31.09Z" transform="translate(0 0)"/><path class="logo-elem" d="M281.12,374.34l24.44-16.07L433.38,552.7l-26.66,17.53-180-96.49,98.6,150L300.89,639.8,173.07,445.37l26.67-17.53,180,96.49Z" transform="translate(0 0)"/><path class="logo-elem" d="M13.79,248.64l11-25.68L185,291.38l-11,25.68L107.38,288.6,26.9,476.9,0,465.42l80.43-188.3Z" transform="translate(0 0)"/></svg>
       <div class="static-line"></div>
       <div class="titles-wrap">
           <h1 class="large-title here is--active">YOU ARE HERE</h1>
           <h1 class="large-title human">YOU ARE A HUMAN</h1>
-          <h1 class="large-title light garden">THIS CITY IS YOUR GARDEN</h1>
-          <h1 class="large-title areyouhere">ARE YOU HERE?</h1>
-          <h1 class="large-title light hereyouare">HERE YOU ARE</h1>
+          <div class="large-title light garden">
+            <h1>THIS CITY IS YOUR GARDEN</h1>
+            <p>Plant NOMA gives you the opportunity to keep your hands dirty through City Gardening.</p>
+          </div>
+          <div class="large-title areyouhere">
+            <h1>ARE YOU HERE?</h1>
+            <p>Garden is a verb, so let’s get this garden gardened. We release these workshops in 12 week seasons.</p>
+          </div>
+          <div class="large-title light hereyouare">
+            <h1>HERE YOU ARE</h1>
+            <p>This is our ideas compost, we throw it all on here.<br>
+              Things we have done, conversations we’ve had and bits and pieces that have occurred to us. 
+            </p>
+          </div>
       </div>
+    <img src="/plantnoma/assets/img/you-underline.svg" class="you-underline"> 
+    <img src="/plantnoma/assets/img/index-arrow.svg" class="index-arrow desktop-only">
+    <img src="/plantnoma/assets/img/mobile-index-arrow.svg" class="index-arrow mobile-only">
     <h1 class="large-title-italic living-world"><i>IN A LIVING<br>WORLD</i></h1>
     <img src="/plantnoma/assets/img/greens.svg" class="greens">
   </div>
@@ -75,7 +90,7 @@
   <svg id="circle" class="circle" data-name="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41"><defs><style>.cls-1{fill:#38523e;}</style></defs><circle class="cls-1" cx="20.5" cy="20.5" r="20.5"/></svg>
   <svg id="circle-2" class="circle-2" data-name="circle-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41"><defs><style>.circle-2{fill:#38523e;}</style></defs><circle class="circle-2" cx="20.5" cy="20.5" r="20.5"/></svg>
 
-  <div class="box-element box-1"></div>
+  <div id="you-are-here" class="box-element box-1"></div>
   <div class="box-element box-2"></div>
 
   <div class="garden-images-container">
@@ -95,10 +110,11 @@
           <img src="/plantnoma/assets/img/ag4i1919.webp" class="garden-image">
       
   </div>
+  <a id="are-you-here"></a>
   <div class="events-container">
       
       <div class="event-flex">
-          <p>Mushroom Motel</p>
+          <p class="event-title" data-image="/plantnoma/assets/img/log.png">Mushroom Motel</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Jan 8, 14:00</p>
 
@@ -106,7 +122,7 @@
       </div>
       
       <div class="event-flex">
-          <p>Hungry Birds</p>
+          <p class="event-title" data-image="/plantnoma">Hungry Birds</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Jan 15, 14:00</p>
 
@@ -114,7 +130,7 @@
       </div>
       
       <div class="event-flex">
-          <p>Magical Moss</p>
+          <p class="event-title" data-image="/plantnoma">Magical Moss</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Jan 22, 14:00</p>
 
@@ -122,7 +138,7 @@
       </div>
       
       <div class="event-flex">
-          <p>Flower Press</p>
+          <p class="event-title" data-image="/plantnoma">Flower Press</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Jan 29, 14:00</p>
 
@@ -130,7 +146,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Mini-Beasts</p>
+          <p class="event-title" data-image="/plantnoma">The Mini-Beasts</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Jan 1, 14:00</p>
 
@@ -138,7 +154,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Big Dig</p>
+          <p class="event-title" data-image="/plantnoma">The Big Dig</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Feb 12, 14:00</p>
 
@@ -146,7 +162,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Beatles</p>
+          <p class="event-title" data-image="/plantnoma">The Beatles</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Feb 19, 14:00</p>
 
@@ -154,7 +170,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Potatoes</p>
+          <p class="event-title" data-image="/plantnoma">The Potatoes</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Feb 26, 14:00</p>
 
@@ -162,7 +178,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Worms</p>
+          <p class="event-title" data-image="/plantnoma">The Worms</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Mar 5, 14:00</p>
 
@@ -170,7 +186,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Wildflowers</p>
+          <p class="event-title" data-image="/plantnoma">The Wildflowers</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Mar 12, 14:00</p>
 
@@ -178,7 +194,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Strawberries</p>
+          <p class="event-title" data-image="/plantnoma">The Strawberries</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Mar 19, 14:00</p>
 
@@ -186,7 +202,7 @@
       </div>
       
       <div class="event-flex">
-          <p>The Big Seed Sow</p>
+          <p class="event-title" data-image="/plantnoma">The Big Seed Sow</p>
           <p class="event-location">Sadler's Yard</p>
           <p class="event-date">Sat, Mar 26, 14:00</p>
 
@@ -195,31 +211,39 @@
       
   </div>
   <div class="box-element box-3"></div>
-  <div class="box-element box-4"></div>
+  <div id="here-you-are" class="box-element box-4"></div>
+  <div class="compost-images bugs-flex">
+    <img src="/plantnoma/assets/img/beetle-1.png">
+    <img src="/plantnoma/assets/img/worm.png">
+    <img src="/plantnoma/assets/img/beetle-2.png">
+    <img src="/plantnoma/assets/img/beetle-2.png">
+    <img src="/plantnoma/assets/img/worm.png">
+    <img src="/plantnoma/assets/img/ant.png">
+  </div>
   <div class="compost-images">
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/planting_008.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/planting_008.webp" class="compost-img" loading="lazy"></a>
     </div>
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/2021-09-04-sadlers-yard-summer-jam-405.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/2021-09-04-sadlers-yard-summer-jam-405.webp" class="compost-img" loading="lazy"></a>
     </div>
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/ag4i0927.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/ag4i0927.webp" class="compost-img" loading="lazy"></a>
     </div>
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/dsc093471.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/dsc093471.webp" class="compost-img" loading="lazy"></a>
     </div>
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/ag4i6260.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/ag4i6260.webp" class="compost-img" loading="lazy"></a>
     </div>
     
     <div class="compost-img-wrap">
-      <img src="/plantnoma/assets/img/ag4i2176.webp" class="compost-img">
+      <a href="https://medium.com/@plantnoma" target="_blank"><img src="/plantnoma/assets/img/ag4i2176.webp" class="compost-img" loading="lazy"></a>
     </div>
     
   </div>
@@ -228,17 +252,35 @@
 <script src="/plantnoma/assets/js/scroll.js"></script>
 <script>
     $('.compost-img').each(function(){
-      y = Math.floor((Math.random() * 10) + 1);
-      x = Math.floor((Math.random() * 73) + 1);
-      a = Math.floor((Math.random() * 5) + 1);
       b = Math.ceil(Math.random() * 5) * (Math.round(Math.random()) ? 1 : -1);
       if (window.matchMedia('(min-width: 600px)').matches) {
-        $(this).css("bottom", y + 'vh');
-        $(this).css("left", x + 'vw');
+        $(this).css("transform", "rotate("+ b + 'deg)');
       } else {
         $(this).css("transform", "rotate("+ b + 'deg)');
       }
     });
+  
+    
+    const items = document.querySelectorAll('.event-title')
+    const image = document.querySelector('.hover-img')
+
+    items.forEach((el) => {
+      el.addEventListener('mouseover', (e) => {
+        imageData = e.target.getAttribute('data-image')
+        console.log(imageData)
+        e.target.style.zIndex = 99
+        image.setAttribute('src', imageData)
+      })
+      el.addEventListener('mousemove', (e) => {
+        image.style.top = e.clientY + 'px'
+        image.style.left = e.clientX + 'px'
+      })
+      el.addEventListener('mouseleave', (e) => {
+        e.target.style.zIndex = 1
+        image.setAttribute('src', '')
+      })
+    })
+
 </script>
 
         <div class="footer-page footer-desktop">
