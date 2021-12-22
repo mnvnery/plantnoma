@@ -33,4 +33,9 @@ highlighted_text: "<p>THIS PROJECT CAN ONLY CONTINUE TO GROW IF WE CONTINUE TO <
         </div>
         {% endfor %}
     </div>
+    <div class="image-center">
+      {% for img in page.images %}
+        <img src="{{site.baseurl}}/{{ img }}" class="noma-photo">
+      {% endfor %}
+  </div>
 </div>

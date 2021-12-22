@@ -16,28 +16,28 @@ images:
 - "/assets/img/image-12.webp"
 
 ---
-<div class="fixed-elements fixed-noma">
-      <div class="static-line-white"></div>
-      <h1 class="page-title">NOMA</h1>
-      <div class="main-info">
-          <div class="info-left">
-            <h2>{{ page.highlighted_text }}</h2>
-            <div class="noma-flex">
-              <p>@NOMA_MCR</p>
-              <div class="small-circle"></div>
-              <p>www.noma-manchester.com</p>
-            </div>
-          </div>
-          <div class="general-text">{{ page.general_text }}</div>
+
+<div class="static-line-white"></div>
+<div class="info-container">
+<h1 class="page-title">NOMA</h1>
+<div class="main-info">
+    <div class="info-left">
+      <h2>{{ page.highlighted_text }}</h2>
+      <div class="noma-flex">
+        <p>@NOMA_MCR</p>
+        <div class="small-circle"></div>
+        <p>www.noma-manchester.com</p>
       </div>
+    </div>
+    <div class="general-text">{{ page.general_text }}</div>
 </div>
 
-  <div class="noma-photo-grid">
+<div class="image-center">
     {% for img in page.images %}
       <img src="{{site.baseurl}}/{{ img }}" class="noma-photo">
     {% endfor %}
-  </div>
-
+</div>
+</div>
 <script>
 window.onload = function () {
 var images = document.getElementsByTagName('img');
