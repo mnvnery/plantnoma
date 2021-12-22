@@ -4,8 +4,9 @@ $('.hamburger').click(function() {
     $('.navbar-container').toggleClass('navbar-open');
 });
 
-$('a .book-btn').hover(function() {
-    $(this).toggleClass('.book-btn-active');
+$('.book-btn').hover(function() {
+    console.log($(this).children("span"));
+    $(this).next("span").toggle();
 });
 
 

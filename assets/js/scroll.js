@@ -123,8 +123,8 @@ ScrollTrigger.matchMedia({
         gsap.to(".index-arrow", {
             opacity: "0",
             scrollTrigger: {
-                start: "bottom 65%",
-                end: "bottom 10%",
+                start: "bottom 100%",
+                end: "bottom 50%",
                 trigger: ".box-1",
                 scrub: true,
             }
@@ -368,6 +368,15 @@ ScrollTrigger.matchMedia({
                     scrub: true,
                 }
             })
+            gsap.to(".events-container, .greens, .index-arrow", {
+                display: "none",
+                scrollTrigger: {
+                    start:  "70% bottom",
+                    end: "70% bottom",
+                    trigger: ".box-4",
+                    scrub: true,
+                }
+            })
 
             gsap.to(".hamburger-inner", {
                 scrollTrigger: {
@@ -446,6 +455,22 @@ ScrollTrigger.matchMedia({
                     },
                     onEnterBack: () => {
                         $(".hamburger-inner").addClass("dark-mode");
+                    }
+                }
+            })
+            gsap.to(".hereyouare", {
+                display: "none",
+                scrollTrigger: {
+                    trigger: ".footer-page",
+                    // trigger element - viewport
+                    start: "55% bottom",
+                    end: "55% bottom",
+                    scrub: true,
+                    onEnter: () => {
+                        $(".hereyouare").removeClass("is--active");
+                    },
+                    onEnterBack: () => {
+                        $(".hereyouare").addClass("is--active");
                     }
                 }
             })
