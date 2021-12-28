@@ -4,10 +4,11 @@ garden_images:
 - "/assets/img/planting_073.webp"
 - "/assets/img/sj21_001.webp"
 - "/assets/img/dsc095171.webp"
-- "/assets/img/ag4i0942.webp"
-- "/assets/img/2021-09-04-sadlers-yard-summer-jam-191.webp"
 - "/assets/img/2021-09-04-sadlers-yard-summer-jam-200.webp"
+- "/assets/img/2021-09-04-sadlers-yard-summer-jam-191.webp"
+- "/assets/img/ag4i0942.webp"
 - "/assets/img/ag4i1919.webp"
+- "/assets/img/AG4I1573.webp"
 here_you_are_images:
 - "/assets/img/planting_008.webp"
 - "/assets/img/2021-09-04-sadlers-yard-summer-jam-405.webp"
@@ -164,6 +165,15 @@ eventbrite:
       }
     });
   
+    window.onload = function () {
+      var images = document.querySelectorAll('.garden-image');
+
+      for( var i=0; i<images.length;i++){
+        if(images[i].naturalWidth < images[i].naturalHeight) {
+            $(images[i]).addClass('portrait');  
+        }
+      }
+    }
     
     const items = document.querySelectorAll('.event-title')
     const image = document.querySelector('.hover-img')

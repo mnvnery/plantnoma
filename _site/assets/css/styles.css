@@ -114,9 +114,11 @@ a:hover { font-style: italic; }
 
 .greens { width: 50%; float: right; }
 
-.garden-images-container { display: grid; grid-template-columns: 1fr 1fr; margin: 20px; margin-bottom: 60vh; }
+.garden-images-container { display: grid; grid-template-columns: 1fr 1fr; margin: 20px; margin-bottom: 60vh; max-width: 96vw; align-items: center; }
 
-.garden-image { width: 20vw; margin-bottom: 5vh; }
+.garden-image { width: 28vw; margin-bottom: 5vh; }
+
+.garden-image.portrait { width: 20vw; }
 
 .garden-image:nth-child(even) { justify-self: end; margin-top: 5vh; }
 
@@ -210,7 +212,7 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 @media screen and (max-width: 600px) { .garden-image { width: 35vw; } .compost-img { max-width: 50vw; position: relative; max-height: 23vh; } .compost-images { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, auto); bottom: -1vh; } .large-title { width: 89vw; } .circle { width: 7vw; bottom: 10vw; right: 5vw; } .circle-2 { width: 90vw; bottom: -25vw; } .greens { width: 100%; } .living-world { right: 6vw; } .events-container { width: 89vw; top: 19vh; } .book-btn, .event-location { display: none; } .event-flex p { width: auto; margin: 1.5vh 0; } .event-date { width: 39% !important; } .index-arrow { position: fixed; left: 2vw; top: 30vh; bottom: 0; max-height: 58vh; } .you-underline { position: fixed; width: 17vw; left: 7vw; top: 26vh; } }
 
-@media screen and (max-width: 376px) { .index-arrow { left: 11vw; top: 33vh; } .you-underline { top: 29vh; } .circle { bottom: 0; } .events-container { top: 22vh; } .compost-images { bottom: -8vh; } }
+@media screen and (max-width: 376px) { .index-arrow { left: 11vw; top: 33vh; } .you-underline { top: 29vh; } .events-container { top: 22vh; } .compost-images { bottom: -8vh; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }

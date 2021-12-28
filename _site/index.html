@@ -102,13 +102,15 @@
       
           <img src="/plantnoma/assets/img/dsc095171.webp" class="garden-image">
       
-          <img src="/plantnoma/assets/img/ag4i0942.webp" class="garden-image">
+          <img src="/plantnoma/assets/img/2021-09-04-sadlers-yard-summer-jam-200.webp" class="garden-image">
       
           <img src="/plantnoma/assets/img/2021-09-04-sadlers-yard-summer-jam-191.webp" class="garden-image">
       
-          <img src="/plantnoma/assets/img/2021-09-04-sadlers-yard-summer-jam-200.webp" class="garden-image">
+          <img src="/plantnoma/assets/img/ag4i0942.webp" class="garden-image">
       
           <img src="/plantnoma/assets/img/ag4i1919.webp" class="garden-image">
+      
+          <img src="/plantnoma/assets/img/AG4I1573.webp" class="garden-image">
       
   </div>
   <a id="are-you-here"></a>
@@ -297,6 +299,15 @@
       }
     });
   
+    window.onload = function () {
+      var images = document.querySelectorAll('.garden-image');
+
+      for( var i=0; i<images.length;i++){
+        if(images[i].naturalWidth < images[i].naturalHeight) {
+            $(images[i]).addClass('portrait');  
+        }
+      }
+    }
     
     const items = document.querySelectorAll('.event-title')
     const image = document.querySelector('.hover-img')

@@ -131,7 +131,7 @@ ScrollTrigger.matchMedia({
         "(max-width: 376px)": function() {
             gsap.to(".circle", {
                 width: "90vw",
-                y: "15vh",
+                y: "21vh",
                 right: "-3vw",
                 scrollTrigger: {
                     start: "bottom 100%",
