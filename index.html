@@ -122,17 +122,16 @@ eventbrite:
   <a id="are-you-here"></a>
   <div class="events-container">
       {% for event in page.eventbrite reversed %}
-      <div class="event-flex">
+      <a href="{{ event.link }}" target="_blank" class="event-link"><div class="event-flex">
           <p class="event-title" data-image="{{ site.baseurl }}{{ event.reference_image }}">{{ event.title }}</p>
           <p class="event-location">{{ event.location }}</p>
           <p class="event-date">{{ event.date_time | date: "%a, %b %-d, %H:%M" }}</p>
           <div class="book-btn-container">
-            <a href="{{ event.link }}" target="_blank">
+            
               <div class="book-btn"></div>
               <span class="book-btn-active">BOOK YOUR SPOT</span>
-            </a>
           </div>
-      </div>
+      </div></a>
       {% endfor %}
   </div>
   <div class="box-element box-3"></div>
@@ -172,7 +171,6 @@ eventbrite:
     items.forEach((el) => {
       el.addEventListener('mouseover', (e) => {
         imageData = e.target.getAttribute('data-image')
-        console.log(imageData)
         e.target.style.zIndex = 99
         image.setAttribute('src', imageData)
       })

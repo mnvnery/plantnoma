@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
 	
     // ---------------- large screens ---------------------
-    "(min-width: 960px)": function() {
+    "(min-width: 1300px)": function() {
         gsap.to(".circle", {
             width: "41vw",
             bottom: "-28vh",
@@ -47,13 +47,43 @@ ScrollTrigger.matchMedia({
     },
 
     // ---------------- medium screens ---------------------
-    "(min-width: 600px) and (max-width: 959px)": function() {
+    "(min-width: 600px) and (max-width: 1300px)": function() {
       // The ScrollTriggers created inside these functions are segregated and get
       // reverted/killed when the media query doesn't match anymore. 
+    gsap.to(".circle", {
+        width: "41vw",
+        bottom: "-17vh",
+        right: "-2vw",
+        scrollTrigger: {
+            start: "bottom 100%",
+            end: "bottom 50%",
+            trigger: ".box-1",
+            scrub: true,
+        }
+    })   
+    // Greens-1   
+    let tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: $(".box-1"),
+        // trigger element - viewport
+        start: "bottom 65%",
+        end: "bottom 10%",
+        scrub: true
+        }
+    });
+    tl.fromTo($(".greens"), {
+        y:"100vh",
+        duration: 1
+        },
+        {
+        y:"2vh",
+        duration: 1
+        }
+    ); 
     },
 
     // ---------------- small screens ---------------------
-    "(max-width: 599px)": function() {
+    "(min-width: 376px) and (max-width: 599px)": function() {
         gsap.to(".circle", {
             width: "90vw",
             y: "15vh",
@@ -96,7 +126,52 @@ ScrollTrigger.matchMedia({
                     scrub: true,
                 }
             })
-    },     
+    }, 
+        // ---------------- x-small screens ---------------------
+        "(max-width: 376px)": function() {
+            gsap.to(".circle", {
+                width: "90vw",
+                y: "15vh",
+                right: "-3vw",
+                scrollTrigger: {
+                    start: "bottom 100%",
+                    end: "bottom 50%",
+                    trigger: ".box-1",
+                    scrub: true,
+                }
+            })        
+            // Greens-1
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                    trigger: $(".box-1"),
+                    // trigger element - viewport
+                    start: "bottom 65%",
+                    end: "bottom 10%",
+                    scrub: true
+                    }
+                });
+                tl.fromTo($(".greens"), {
+                    y:"100vh",
+                    duration: 1
+                    },
+                    {
+                    y:"20vh",
+                    duration: 1
+                    }
+                );
+                gsap.to(".circle-2", {
+                    display: "block",
+                    width: '215vw',
+                    x: "2.5vw",
+                    bottom: 0,
+                    scrollTrigger: {
+                        start: "bottom 100%",
+                        end: "bottom 50%",
+                        trigger: ".box-2",
+                        scrub: true,
+                    }
+                })
+        },       
     // ---------------- all screens --------------------- 
     "all": function() {
         //start    
