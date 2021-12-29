@@ -532,7 +532,7 @@ ScrollTrigger.matchMedia({
                 }
             })
             gsap.to(".compost-images", {
-                y: "-110vh",
+                y: "-115vh",
                 immediateRender: false,
                 scrollTrigger: {
                     start: "bottom 70%",
