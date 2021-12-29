@@ -114,18 +114,7 @@ ScrollTrigger.matchMedia({
             }
         ); 
     window.addEventListener("load", function() {
-        gsap.to(".compost-images", {
-            y: "-118vh",
-            immediateRender: false,
-            scrollTrigger: {
-                start: "60% 75%",
-                end: "bottom -8%",
-                trigger: ".box-4",
-                scrub: true, 
-                markers: true       
-            }
-        })
-    });
+
     },
     // ---------------- small screens ---------------------
     "(min-width: 376px) and (max-width: 599px)": function() {
