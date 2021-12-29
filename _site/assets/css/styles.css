@@ -158,6 +158,8 @@ a:hover { font-style: italic; }
 
 .hover-img { position: fixed; max-width: 20vw; max-height: 30vh; object-fit: contain; transform: translateX(-50%) translateY(-50%); top: 50%; left: 50%; z-index: 10; pointer-events: none; }
 
+.hover-img[src=""] { content: ''; }
+
 .event-link:hover { font-style: normal; }
 
 .info-container { overflow-y: scroll; height: 75vh; }
