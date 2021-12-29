@@ -519,15 +519,16 @@ ScrollTrigger.matchMedia({
                 }
             })
             gsap.to(".compost-images", {
-                y: "-115vh",
+                y: "-110vh",
                 immediateRender: false,
                 scrollTrigger: {
                     start: "bottom 70%",
                     end: "bottom -8%",
                     trigger: ".box-4",
-                    scrub: true,        
+                    scrub: true,       
                 }
             })
+
             gsap.to("body", {
                 backgroundColor: "#EBEEEC",
                 immediateRender: false,
