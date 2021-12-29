@@ -14,3 +14,7 @@ $('.navbar a').click(function() {
     $('.navbar-container').toggleClass('navbar-open');
     $('.hamburger-inner, .logo-elem').toggleClass("light-background");
 });
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
