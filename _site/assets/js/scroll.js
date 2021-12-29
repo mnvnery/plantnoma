@@ -113,8 +113,6 @@ ScrollTrigger.matchMedia({
             duration: 1
             }
         ); 
-    window.addEventListener("load", function() {
-
     },
     // ---------------- small screens ---------------------
     "(min-width: 376px) and (max-width: 599px)": function() {
