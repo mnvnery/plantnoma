@@ -81,7 +81,52 @@ ScrollTrigger.matchMedia({
         }
     ); 
     },
-
+    // ---------------- medium screens - portrait ---------------------
+    "(min-width: 600px) and (max-width: 1025px) and (orientation: portrait)": function() {
+        gsap.to(".circle", {
+            width: "82vw",
+            bottom: "-17vh",
+            right: "-3vw",
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })   
+        // Greens-1   
+        let tl = gsap.timeline({
+            scrollTrigger: {
+            trigger: $(".box-1"),
+            // trigger element - viewport
+            start: "bottom 65%",
+            end: "bottom 10%",
+            scrub: true
+            }
+        });
+        tl.fromTo($(".greens"), {
+            y:"100vh",
+            duration: 1
+            },
+            {
+            y:"15vh",
+            duration: 1
+            }
+        ); 
+    window.addEventListener("load", function() {
+        gsap.to(".compost-images", {
+            y: "-118vh",
+            immediateRender: false,
+            scrollTrigger: {
+                start: "60% 75%",
+                end: "bottom -8%",
+                trigger: ".box-4",
+                scrub: true, 
+                markers: true       
+            }
+        })
+    });
+    },
     // ---------------- small screens ---------------------
     "(min-width: 376px) and (max-width: 599px)": function() {
         gsap.to(".circle", {
@@ -493,8 +538,7 @@ ScrollTrigger.matchMedia({
                     start: "bottom 70%",
                     end: "bottom -8%",
                     trigger: ".box-4",
-                    scrub: true,
-        
+                    scrub: true,        
                 }
             })
             gsap.to("body", {
