@@ -86,7 +86,7 @@ a:hover { font-style: italic; }
 
 @media screen and (min-width: 600px) { .footer-mobile { display: none; } .page-selection h3 { margin-bottom: 0; } }
 
-@media screen and (max-width: 600px) { .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 14vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } }
+@media screen and (max-width: 600px) { .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 14vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } .signup { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 2.5vh; } }
 
 .fixed-elements { position: fixed; width: 100vw; z-index: 2; }
 
