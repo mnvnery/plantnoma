@@ -51,7 +51,7 @@ ScrollTrigger.matchMedia({
       // The ScrollTriggers created inside these functions are segregated and get
       // reverted/killed when the media query doesn't match anymore. 
     gsap.to(".circle", {
-        width: "41vw",
+        width: "43vw",
         bottom: "-17vh",
         right: "-2vw",
         scrollTrigger: {
@@ -76,7 +76,7 @@ ScrollTrigger.matchMedia({
         duration: 1
         },
         {
-        y:"2vh",
+        y:"12vh",
         duration: 1
         }
     ); 
