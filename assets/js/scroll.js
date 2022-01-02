@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
 	
     // ---------------- large screens ---------------------
-    "(min-width: 1300px)": function() {
+    "(min-width: 1370px)": function() {
         gsap.to(".circle", {
             width: "41vw",
             bottom: "-28vh",
@@ -47,7 +47,7 @@ ScrollTrigger.matchMedia({
     },
 
     // ---------------- medium screens ---------------------
-    "(min-width: 600px) and (max-width: 1300px)": function() {
+    "(min-width: 600px) and (max-width: 1370px)": function() {
       // The ScrollTriggers created inside these functions are segregated and get
       // reverted/killed when the media query doesn't match anymore. 
     gsap.to(".circle", {
