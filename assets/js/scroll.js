@@ -76,7 +76,7 @@ ScrollTrigger.matchMedia({
         duration: 1
         },
         {
-        y:"2vh",
+        y:"13vh",
         duration: 1
         }
     ); 
