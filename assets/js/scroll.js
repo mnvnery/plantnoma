@@ -14,25 +14,15 @@ ScrollTrigger.matchMedia({
                 scrub: true,
             }
         })   
-        // Greens-1   
-        let tl = gsap.timeline({
-            scrollTrigger: {
-            trigger: $(".box-1"),
-            // trigger element - viewport
-            start: "bottom 65%",
-            end: "bottom 10%",
-            scrub: true
-            }
-        });
-        tl.fromTo($(".greens"), {
+        gsap.from(".greens", {
             y:"100vh",
-            duration: 1
-            },
-            {
-            y:"-18vh",
-            duration: 1
+            scrollTrigger: {
+                start: "bottom 65%",
+                end: "bottom 10%",
+                trigger: ".box-1",
+                scrub: true,
             }
-        ); 
+        })   
         gsap.to(".circle-2", {
             display: "block",
             width: '104vw',
@@ -50,37 +40,27 @@ ScrollTrigger.matchMedia({
     "(min-width: 600px) and (max-width: 1370px)": function() {
       // The ScrollTriggers created inside these functions are segregated and get
       // reverted/killed when the media query doesn't match anymore. 
-    gsap.to(".circle", {
-        width: "43vw",
-        bottom: "-17vh",
-        right: "-2vw",
-        scrollTrigger: {
-            start: "bottom 100%",
-            end: "bottom 50%",
-            trigger: ".box-1",
-            scrub: true,
-        }
-    })   
-    // Greens-1   
-    let tl = gsap.timeline({
-        scrollTrigger: {
-        trigger: $(".box-1"),
-        // trigger element - viewport
-        start: "bottom 65%",
-        end: "bottom 10%",
-        scrub: true
-        }
-    });
-    tl.fromTo($(".greens"), {
-        y:"100vh",
-        duration: 1
-        },
-        {
-        y:"12vh",
-        duration: 1
-        }
-    ); 
-    },
+        gsap.to(".circle", {
+            width: "43vw",
+            bottom: "-17vh",
+            right: "-2vw",
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })   
+        gsap.from(".greens", {
+            y:"100vh",
+            scrollTrigger: {
+                start: "bottom 65%",
+                end: "bottom 10%",
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })
+    },   
     // ---------------- medium screens - portrait ---------------------
     "(min-width: 600px) and (max-width: 1025px) and (orientation: portrait)": function() {
         gsap.to(".circle", {
@@ -94,26 +74,16 @@ ScrollTrigger.matchMedia({
                 scrub: true,
             }
         })   
-        // Greens-1   
-        let tl = gsap.timeline({
-            scrollTrigger: {
-            trigger: $(".box-1"),
-            // trigger element - viewport
-            start: "bottom 65%",
-            end: "bottom 10%",
-            scrub: true
-            }
-        });
-        tl.fromTo($(".greens"), {
+        gsap.from(".greens", {
             y:"100vh",
-            duration: 1
-            },
-            {
-            y:"15vh",
-            duration: 1
+            scrollTrigger: {
+                start: "bottom 65%",
+                end: "bottom 10%",
+                trigger: ".box-1",
+                scrub: true,
             }
-        ); 
-    },
+        }) 
+    },  
     // ---------------- small screens ---------------------
     "(min-width: 376px) and (max-width: 599px)": function() {
         gsap.to(".circle", {
@@ -127,37 +97,27 @@ ScrollTrigger.matchMedia({
                 scrub: true,
             }
         })        
-        // Greens-1
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                trigger: $(".box-1"),
-                // trigger element - viewport
+        gsap.from(".greens", {
+            y:"100vh",
+            scrollTrigger: {
                 start: "bottom 65%",
                 end: "bottom 10%",
-                scrub: true
-                }
-            });
-            tl.fromTo($(".greens"), {
-                y:"100vh",
-                duration: 1
-                },
-                {
-                y:"30vh",
-                duration: 1
-                }
-            );
-            gsap.to(".circle-2", {
-                display: "block",
-                width: '215vw',
-                x: "2.5vw",
-                bottom: 0,
-                scrollTrigger: {
-                    start: "bottom 100%",
-                    end: "bottom 50%",
-                    trigger: ".box-2",
-                    scrub: true,
-                }
-            })
+                trigger: ".box-1",
+                scrub: true,
+            }
+        })   
+        gsap.to(".circle-2", {
+            display: "block",
+            width: '215vw',
+            x: "2.5vw",
+            bottom: 0,
+            scrollTrigger: {
+                start: "bottom 100%",
+                end: "bottom 50%",
+                trigger: ".box-2",
+                scrub: true,
+            }
+        })
     }, 
         // ---------------- x-small screens ---------------------
         "(max-width: 376px)": function() {
@@ -172,37 +132,27 @@ ScrollTrigger.matchMedia({
                     scrub: true,
                 }
             })        
-            // Greens-1
-                let tl = gsap.timeline({
-                    scrollTrigger: {
-                    trigger: $(".box-1"),
-                    // trigger element - viewport
+            gsap.from(".greens", {
+                y:"100vh",
+                scrollTrigger: {
                     start: "bottom 65%",
                     end: "bottom 10%",
-                    scrub: true
-                    }
-                });
-                tl.fromTo($(".greens"), {
-                    y:"100vh",
-                    duration: 1
-                    },
-                    {
-                    y:"20vh",
-                    duration: 1
-                    }
-                );
-                gsap.to(".circle-2", {
-                    display: "block",
-                    width: '215vw',
-                    x: "2.5vw",
-                    bottom: 0,
-                    scrollTrigger: {
-                        start: "bottom 100%",
-                        end: "bottom 50%",
-                        trigger: ".box-2",
-                        scrub: true,
-                    }
-                })
+                    trigger: ".box-1",
+                    scrub: true,
+                }
+            })   
+            gsap.to(".circle-2", {
+                display: "block",
+                width: '215vw',
+                x: "2.5vw",
+                bottom: 0,
+                scrollTrigger: {
+                    start: "bottom 100%",
+                    end: "bottom 50%",
+                    trigger: ".box-2",
+                    scrub: true,
+                }
+            })
         },       
     // ---------------- all screens --------------------- 
     "all": function() {

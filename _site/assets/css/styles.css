@@ -66,7 +66,7 @@ a:hover { font-style: italic; }
 
 .main-titles-flex { flex-grow: 2; display: flex; flex-direction: column; justify-content: flex-end; margin-bottom: 7vh; }
 
-.footer-page { height: 100vh; width: 100vw; background-color: #EBEEEC; position: relative; }
+.footer-page { height: 100vh; width: 100vw; background-color: #EBEEEC; position: relative; color: #38523E; }
 
 .footer-container { position: absolute; bottom: 0; padding: 20px; }
 
@@ -78,7 +78,17 @@ a:hover { font-style: italic; }
 
 .page-selection p { max-width: 15vw; margin-top: 1.5vh; }
 
-.signup-line { border-bottom: 2px solid #38523E; }
+.signup-line { border: 0px !important; border-bottom: 2px solid #38523E !important; background-color: transparent !important; border-radius: 0 !important; }
+
+#mc_embed_signup .button { border-radius: 0; background-color: transparent; color: #38523E; border-bottom: 2px solid #38523E; font-weight: bold; font-family: 'HK Grotesk', 'sans-serif'; }
+
+#mc_embed_signup input.email { padding: 0; font-family: 'HK Grotesk', 'sans-serif'; color: #38523E; width: auto; }
+
+#mc_embed_signup .button:hover { font-style: italic; background-color: transparent; }
+
+#mc_embed_signup form { padding: 0; }
+
+textarea:focus, input:focus { outline: none; }
 
 .footer-socials a:hover { font-style: normal; text-decoration: underline; }
 
@@ -112,7 +122,7 @@ a:hover { font-style: italic; }
 
 .light { color: #EBEEEC; }
 
-.greens { width: 50%; float: right; }
+.greens { width: 50%; position: fixed; right: 0; bottom: 0; }
 
 .garden-images-container { display: grid; grid-template-columns: 1fr 1fr; margin: 20px; margin-bottom: 60vh; max-width: 96vw; align-items: center; }
 
@@ -168,11 +178,11 @@ a:hover { font-style: italic; }
 
 .page-title { padding: 20px; }
 
-.main-info { display: flex; padding: 0 20px; justify-content: space-between; gap: 5%; width: 96vw; }
+.main-info { display: flex; padding: 0 20px; justify-content: space-between; width: 96vw; }
 
-.info-left { width: 50%; }
+.info-left { width: 45%; }
 
-.main-info h2 { margin: 0; }
+.main-info h2 { margin: 0; padding-right: 5%; }
 
 .general-text { margin-block-start: 1.7em; width: 52%; font-size: 1.2em; line-height: 1.6em; margin-right: 2vw; }
 
@@ -180,7 +190,7 @@ a:hover { font-style: italic; }
 
 .contacts p { margin-block-end: 1vh; margin-block-start: 1vh; }
 
-.contacts div { width: 50%; margin-bottom: 5vh; }
+.contacts div { width: 47%; margin-bottom: 5vh; }
 
 .email { font-weight: 200; }
 
@@ -208,7 +218,7 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 @media screen and (min-width: 600px) { .mobile-only { display: none; } .interested, .general-text { margin-left: 5vw; } .noma-photo:nth-child(2) { margin: 0 0.5vw; } .interested, .general-text { margin-left: 0; } }
 
-@media screen and (max-width: 600px) { .desktop-only { display: none; } .mobile-only { margin-left: 20px; } .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 20vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } .margin-5 { margin-bottom: 10vh; } .image-center { flex-direction: column; width: 89vw; margin-bottom: 8vh; } .noma-photo { width: auto; max-height: 25vh; margin-bottom: 1vh; } }
+@media screen and (max-width: 600px) { .desktop-only { display: none; } .mobile-only { margin-left: 20px; } .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 20vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } .margin-5 { margin-bottom: 10vh; } .image-center { flex-direction: column; width: 89vw; margin-bottom: 8vh; } .noma-photo { width: auto; max-height: 25vh; margin-bottom: 1vh; } #mc_embed_signup input.email { width: 100%; } }
 
 @media screen and (min-width: 600px) and (max-width: 1370px) { .events-container { top: 17vh; } .you-underline { top: 29vh; left: 2vw; } .index-arrow { left: 9vw; bottom: -1vh; max-width: 85vw; } .nav-left { max-height: 85vh; } .image-center { gap: initial; margin-bottom: 5vh; } .noma-photo { max-width: 31vw; } }
 
@@ -216,7 +226,11 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 @media screen and (max-width: 376px) { .index-arrow { left: 11vw; top: 33vh; } .you-underline { top: 29vh; } .events-container { top: 22vh; } .compost-images { bottom: -8vh; } }
 
-@media screen and (min-width: 600px) and (max-width: 1025px) and (orientation: portrait) { .logo { width: 12vw; } .you-underline { top: 26vh; left: 4vw; width: 17vw; } .nav-right { display: none; } .nav-left { margin-top: 25vh; margin-left: 15px; } .greens { width: 95%; } .events-container { top: 16.5vh; } .bugs-flex { display: none; } .compost-images { bottom: -2vh; } .compost-img { max-width: 31vw; } .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 15vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } .footer-container { width: 94vw; } .main-info { flex-direction: column; } .info-left { width: 100%; } .interested, .general-text { margin-left: 0; width: 100%; } .mobile-only { display: block; margin-left: 20px; } }
+@media screen and (min-width: 600px) and (max-width: 1025px) and (orientation: portrait) { .logo { width: 12vw; } .you-underline { top: 26vh; left: 4vw; width: 17vw; } .nav-right { display: none; } .nav-left { margin-top: 25vh; margin-left: 15px; } .greens { width: 95%; } .events-container { top: 16.5vh; } .bugs-flex { display: none; } .compost-images { bottom: -2vh; } .compost-img { max-width: 31vw; } .footer-mobile { display: block; } .footer-desktop { display: none; } .footer-pages-flex { display: flex; justify-content: space-between; } .large-plant { font-size: 15vw; margin: 2vh 0; } .footer-page h3 { font-size: 1.2em; margin: 2vh 0; } .footer-container { width: 94vw; } .main-info { flex-direction: column; } .info-left { width: 100%; } .interested, .general-text { margin-left: 0; width: 100%; } }
+
+@media screen and (min-width: 1530px) { .you-underline { top: 31vh; } .events-container { top: 18.5vh; } }
+
+@media screen and (min-width: 2000px) { h1, .h1 { font-size: 7em; } p { font-size: 1.3em; } .events-container { top: 20.5vh; } .book-btn { top: -1vh; } .book-btn-active { top: -1.3vh; } .bugs-flex { width: 90vw; bottom: 0; } .you-underline { width: 9vw; } .index-arrow { width: 70vw; } .footer-container { padding: 40px; } }
 
 /*! Hamburgers @description Tasty CSS-animated hamburgers @author Jonathan Suh @jonsuh @site https://jonsuh.com/hamburgers @link https://github.com/jonsuh/hamburgers */
 .hamburger { padding: 15px 15px; display: inline-block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
