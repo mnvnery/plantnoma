@@ -3,6 +3,7 @@
     width: 100vw
     background-color: $light
     position: relative
+    color: $dark
 
 .footer-container
     position: absolute
@@ -25,7 +26,34 @@
     margin-top: 1.5vh
 
 .signup-line
+    border: 0px !important
+    border-bottom: 2px solid $dark !important
+    background-color: transparent !important
+    border-radius: 0 !important
+
+#mc_embed_signup .button
+    border-radius: 0
+    background-color: transparent
+    color: $dark
     border-bottom: 2px solid $dark
+    font-weight: bold
+    font-family: 'HK Grotesk', 'sans-serif'
+    
+#mc_embed_signup input.email
+    padding: 0
+    font-family: 'HK Grotesk', 'sans-serif'
+    color: $dark
+    width: auto
+
+#mc_embed_signup .button:hover
+    font-style: italic
+    background-color: transparent
+
+#mc_embed_signup form
+    padding: 0
+    
+textarea:focus, input:focus
+    outline: none
 
 .footer-socials a:hover
     font-style: normal
