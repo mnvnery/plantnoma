@@ -1,11 +1,8 @@
 title: Plant Noma
-email: your-email@example.com
+email: hello@plantnoma.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/plantnoma"  # the subpath of your site, e.g. /blog
-url: "https://mnvnery.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+  Giving you the opportunity to keep your hands dirty through City Gardening. Weekly workshops explore horticulture through the widest possible lens 🌿
+url: "https://plantnoma.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
