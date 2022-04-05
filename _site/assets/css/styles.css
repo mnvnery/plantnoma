@@ -52,9 +52,13 @@ a:hover { font-style: italic; }
 
 .navbar-open { display: block; }
 
-.navbar-ws-img { filter: saturate(0); mix-blend-mode: multiply; -webkit-filter: saturate(0); -webkit-mix-blend-mode: multiply; width: 22vw; }
+.navbar-ws-img { filter: saturate(0); mix-blend-mode: multiply; -webkit-filter: saturate(0); -webkit-mix-blend-mode: multiply; width: 20vw; top: 4vh; }
 
-.main-titles-flex h1 { margin-bottom: 5vh; }
+.nav-event-title { margin-top: 0; }
+
+.main-titles-flex h1 { margin-bottom: 0; }
+
+.main-titles-flex p { margin-bottom: 5vh; margin-top: 0; }
 
 .main-titles-flex h1:hover { font-style: italic; }
 
@@ -134,7 +138,7 @@ textarea:focus, input:focus { outline: none; }
 
 .event-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #38523E; }
 
-.event-flex p { width: 20%; margin: 1.4vh 0; }
+.event-flex p { width: 20%; margin: 2.4vh 0; }
 
 .book-btn-container { width: 12%; position: relative; }
 
@@ -218,7 +222,7 @@ a.mapboxgl-ctrl-logo { display: none; }
 
 @media screen and (min-width: 600px) { .mobile-only { display: none; } .interested, .general-text { margin-left: 5vw; } .noma-photo:nth-child(2) { margin: 0 0.5vw; } .interested, .general-text { margin-left: 0; } }
 
-@media screen and (max-width: 600px) { .desktop-only { display: none; } .mobile-only { margin-left: 20px; } .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 20vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } .margin-5 { margin-bottom: 10vh; } .image-center { flex-direction: column; width: 89vw; margin-bottom: 8vh; } .noma-photo { width: auto; max-height: 25vh; margin-bottom: 1vh; } }
+@media screen and (max-width: 600px) { .desktop-only { display: none; } .mobile-only { margin-left: 20px; } .logo-navbar { width: 20vw; top: 0; left: 0; } .logo { width: 20vw; } .static-line-white, .static-line { width: 89vw; } .main-info { flex-direction: column; width: 89vw; } .info-left, .general-text { width: 100%; } .general-text { font-size: 1em; line-height: 1.4em; margin-block-start: 1em; } .nav-right { display: none; } .main-titles-flex h1 { font-size: 2.7em; } .navbar { margin: 20px; height: 65%; margin-top: 20vh; } .interested { font-size: 1.6em; width: auto; } .partners, .contacts { flex-direction: column; width: 89vw; } .partners-elem { width: 95%; } #map { width: 89vw !important; height: 60vh !important; } .contacts div { width: 100%; } .margin-5 { margin-bottom: 10vh; } .image-center { flex-direction: column; width: 89vw; margin-bottom: 8vh; } .noma-photo { width: auto; max-height: 25vh; margin-bottom: 1vh; } .main-titles-flex p { margin-bottom: 4vh; margin-top: 5px; font-size: 0.8em; } }
 
 @media screen and (max-width: 780px) { #mc_embed_signup input.email { width: 100% !important; } }
 
